@@ -25,6 +25,7 @@ h2, h3 {
 header {
     padding: 32px 32px 0 32px;
     height: calc(100% - 64px);
+    min-height: 500px;
     background-image: url('https://images.unsplash.com/photo-1485841938031-1bf81239b815?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1265&q=80');
     background-size: cover;
     background-position: center center;
@@ -44,7 +45,6 @@ header {
     display: grid;
     grid-gap: 8px;
     grid-template-columns: repeat(8, minmax(0, 1fr));
-    max-height: 33.3%;
     align-self: start;
     margin-top: 32px;
 }
@@ -55,21 +55,22 @@ header {
     grid-column: 1 / span 2;
 }
 
-.content {
-    background: #102c23;
+.highlighted > .hl-content {
+    background-color: rgba(0,0,0,0.25);
     grid-column: 3 / -1;
     height: 206px;
+
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    box-shadow: 0px 8px 24px 12px rgba(0,0,0,0.25);
 }
 
-main {
-    background-color: rgb(22, 24, 24);
-    height: 100%;
-    width: 100%;
+.hl-content > .hl-content-item {
+    height: 206px;
+    background-color: #29212e;
 }
 
-section {
-    padding: 32px;
-}
 
 .grid {
     height: 100%;
@@ -83,10 +84,8 @@ section {
     align-items: start;
 }
 
-.grid-item {
-    background-color: #20413b;
-}
-
-.grid-item:nth-child(even) {
-    background-color: #b487a7;
+main {
+    background-color: #161818;
+    height: 200px;
+    width: 100%;
 }
