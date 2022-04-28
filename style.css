@@ -33,9 +33,9 @@ section {
         'header header header'
         'header header header'
         'something something something';
-    justify-content: start; /* this justifies the grid-items (horizontally). 
+    justify-content: start; /* this justifies the grid (horizontally) inside its own container (.grid). 
     other options: center, end, stretch (default) */
-    align-content: center; /* this aligns the grid-items vertically. */
+    align-content: center; /* this aligns the grid vertically. */
     height: 100%;
 }
 
