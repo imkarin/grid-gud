@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    background-color: #0d0d0f;
+    background-color: #1a1010;
     height: 100%;
     width: 100%;
 }
@@ -27,12 +27,15 @@ section {
     grid-gap: 8px;
     grid-template-rows: 120px; /* set the rows of the grid explicitly */
     grid-auto-rows: 30px; /* all undefined (implicit) rows will take on this value */
+
+    grid-template-columns: 200px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* ^ first column stays 200px, the other cols change in size */
 }
 
 .grid > div {
-    background-color: #2441e6;
+    background-color: #f13832;
 }
 
 .grid > div:nth-child(even) {
-    background-color: #506ef5;
+    background-color: #fd6b51;
 }
