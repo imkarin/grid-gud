@@ -28,6 +28,13 @@ section {
     grid-gap: 8px;
     grid-auto-rows: minmax(50px, auto); /* min row size: 50px, maximum: as much as the content needs */
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 200px 100px;
+    grid-template-areas: 
+        'header header header'
+        'header header header'
+        'something something something'
+    /* make sure the amount of columns you define here
+    is equal to the amount of columns in grid-template-columns (if you have defined this) */
 }
 
 .grid-item {
@@ -46,6 +53,6 @@ section {
     border: 1px solid #000;
 }
 
-.grid-item > div:first-child {
-    grid-column: 2 / 4; /* This doesn't work, grandchildren don't take on the grandparent's grid */
+.grid-item:first-child {
+    grid-area: header;
 }
