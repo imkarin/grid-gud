@@ -26,15 +26,17 @@ section {
     margin: auto;
     display: grid;
     grid-gap: 8px;
-    grid-auto-rows: minmax(50px, auto); /* min row size: 50px, maximum: as much as the content needs */
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 200px 100px;
+    grid-auto-columns: minmax(200px, auto); /* min row size: 50px, maximum: as much as the content needs */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-rows: 200px 200px 100px; */
     grid-template-areas: 
         'header header header'
         'header header header'
-        'something something something'
-    /* make sure the amount of columns you define here
-    is equal to the amount of columns in grid-template-columns (if you have defined this) */
+        'something something something';
+    justify-content: start; /* this justifies the grid-items (horizontally). 
+    other options: center, end, stretch (default) */
+    align-content: center; /* this aligns the grid-items vertically. */
+    height: 100%;
 }
 
 .grid-item {
