@@ -6,14 +6,33 @@
     outline: none;
 }
 
+body {
+    height: 100vh;
+}
+
+main {
+    background-color: #0d0d0f;
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    padding: 32px 0;
+}
+
 .grid {
-    /* display: grid; */
+    max-width: 1600px;
+    margin: auto;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-rows: 120px; /* set the rows of the grid explicitly */
+    grid-auto-rows: 30px; /* all undefined (implicit) rows will take on this value */
 }
 
 .grid > div {
-    background: #eee;
+    background-color: #2441e6;
 }
 
 .grid > div:nth-child(even) {
-    background: #ddd;
+    background-color: #506ef5;
 }
