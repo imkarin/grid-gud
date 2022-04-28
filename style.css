@@ -18,6 +18,7 @@ main {
 
 section {
     padding: 32px 0;
+    color: #fff;
 }
 
 .grid {
@@ -25,17 +26,15 @@ section {
     margin: auto;
     display: grid;
     grid-gap: 8px;
-    grid-template-rows: 120px; /* set the rows of the grid explicitly */
-    grid-auto-rows: 30px; /* all undefined (implicit) rows will take on this value */
-
-    grid-template-columns: 200px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    /* ^ first column stays 200px, the other cols change in size */
+    grid-auto-rows: minmax(50px, auto); /* min row size: 50px, maximum: as much as the content needs */
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.grid > div {
+.grid-item {
     background-color: #f13832;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.grid > div:nth-child(even) {
+.grid-item:nth-child(even) {
     background-color: #fd6b51;
 }
