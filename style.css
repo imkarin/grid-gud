@@ -8,54 +8,85 @@
 
 body {
     height: 100vh;
+    color: #fff;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 44px;
+}
+
+h2, h3 {
+    font-weight: 400;
+}
+
+header {
+    padding: 32px 32px 0 32px;
+    height: calc(100% - 64px);
+    background-image: url('https://images.unsplash.com/photo-1485841938031-1bf81239b815?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1265&q=80');
+    background-size: cover;
+    background-position: center center;
+}
+
+.headings {
+    grid-column: 3 / 7;
+    grid-row-start: 1;
+    text-align: center;
+    align-self: center;
+}
+
+.highlighted {
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    max-height: 33.3%;
+    align-self: start;
+    margin-top: 32px;
+}
+
+.highlighted > h3 {
+    display: inline;
+    margin-top: 16px;
+    grid-column: 1 / span 2;
+}
+
+.content {
+    background: #102c23;
+    grid-column: 3 / -1;
+    height: 206px;
 }
 
 main {
-    background-color: #1a1010;
+    background-color: rgb(22, 24, 24);
     height: 100%;
     width: 100%;
 }
 
 section {
-    padding: 32px 0;
-    color: #fff;
+    padding: 32px;
 }
 
 .grid {
+    height: 100%;
+    width: 100%;
     max-width: 1600px;
     margin: auto;
     display: grid;
     grid-gap: 8px;
-    grid-auto-columns: minmax(200px, auto); /* min row size: 50px, maximum: as much as the content needs */
-    grid-auto-rows: 100px;
-    grid-template-areas: 
-        'header header header'
-        'header header header'
-        'something something something';
-    justify-content: start; /* this justifies the grid (horizontally) inside its own container (.grid) */
-    align-content: center; /* this aligns the grid vertically. */
-
-    justify-items: center; /* this justifies the grid-items horizontally inside their own space */
-    align-items: center; /* this aligns the grid-items vertically inside their own space */
-    height: 100%;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-rows: 1fr 206px;
+    align-items: start;
 }
 
 .grid-item {
-    background-color: #f13832;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #20413b;
 }
 
 .grid-item:nth-child(even) {
-    background-color: #fd6b51;
-}
-
-.grid-item > div {
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
-    border: 1px solid #000;
-}
-
-.grid-item:first-child {
-    grid-area: header;
+    background-color: #b487a7;
 }
