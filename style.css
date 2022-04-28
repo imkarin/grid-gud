@@ -33,8 +33,11 @@ section {
 .grid-item {
     background-color: #f13832;
     border: 1px solid rgba(255, 255, 255, 0.5);
+    grid-column: 2 / 3; /* Grid items with the same grid-column and grid-row values, will overlap */
+    grid-row: 5 / 6;
 }
 
 .grid-item:nth-child(even) {
+    grid-row: 4 / 4 ;
     background-color: #fd6b51;
 }
